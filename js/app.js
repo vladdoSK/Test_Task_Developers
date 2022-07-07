@@ -30,3 +30,15 @@ block_offers.addEventListener("click", function(event){
         offer_menu_5.classList.toggle('active');
     }
 });
+
+new Swiper('.swiper', {
+    navigation:
+    {
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev',
+    },
+
+    slidesPerView: 2.2,
+    spaceBetween:25,
+    initialSlide:0,
+});
