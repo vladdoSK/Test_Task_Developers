@@ -242,12 +242,10 @@ h2 {
 
             .offer_menu_header {
                 width: 1170px;
-                height: 61px;
                 display: flex;
                 align-items: center;
                 flex-direction: row;
-                padding-left: 44px;
-                padding-right: 39px;
+                padding: 17px 39px 17px 44px;
 
                 p {
                     font-size: 18px;
@@ -348,6 +346,10 @@ h2 {
         @include text_par(30px, #111111, 900);
         margin-bottom: 97px;
         text-align: center;
+    }
+
+    .h2_block{
+        display:none;
     }
 }
 
@@ -461,6 +463,10 @@ h2 {
     padding-top: 120px;
     text-align: center;
     box-sizing: border-box;
+
+    .h2_block{
+        display: none;
+    }
 
     h2 {
         width: 1920px;
@@ -831,6 +837,17 @@ h2 {
                 top: 49px;
                 background: #67AEFC;
 
+                max-height: 0px;
+                overflow: hidden;
+                transition: .7s ease max-height,
+                    .7s ease padding-bottom;
+
+
+
+                &.active {
+                    max-height: 328px;
+                }
+
                 ul {
                     flex-direction: column;
                     width: 375px;
@@ -861,13 +878,15 @@ h2 {
                     background: white;
                     margin-right: 18px;
 
-                    &::after, &::before {
+                    &::after,
+                    &::before {
                         content: "";
                         height: 13px;
                         width: 13px;
                         border-radius: 50%;
                         background: white;
                     }
+
                     &::before {
                         position: absolute;
                         left: 306px;
@@ -878,7 +897,9 @@ h2 {
                         left: 342px;
                     }
 
-                    &:hover, &:hover::after,&:hover::before{
+                    &:hover,
+                    &:hover::after,
+                    &:hover::before {
                         background: black;
                     }
 
@@ -890,4 +911,192 @@ h2 {
 
         }
     }
+
+
+    //-----------------MAIN BLOCK--------------
+
+    .block_about {
+        width: 377px;
+        height: 732px;
+        padding: 337px 20px 0px 20px;
+        background: url('./../image/mob/first_block_fon.jpg');
+
+        h1 {
+            width: 336px;
+            height: 96px;
+            @include text_par(30px, #484848, 900);
+            line-height: 110%;
+        }
+
+        p {
+            width: 335px;
+            height: 132px;
+            line-height: 140%;
+            margin-bottom: 34px;
+        }
+
+        button {
+            width: 335px;
+        }
+    }
+
+
+    //-----------------------------------
+
+    .we_offer_block {
+        width: 375px;
+        padding: 15px 20px 30px 20px;
+
+        h2 {
+            text-align: center;
+            width: 335px;
+            height: 109px;
+            @include text_par(20px, #111111, 900);
+            line-height: 140%;
+        }
+
+        .block_offers {
+            width: 335px;
+
+            .offer_menu_1,
+            .offer_menu_2,
+            .offer_menu_3,
+            .offer_menu_4,
+            .offer_menu_5 {
+                margin-top: 10px;
+
+                .offer_menu_header{
+                    width: 335px;
+                    padding: 17px 24px 17px 24px;
+
+                    p{
+                        font-size: 18px;
+                        width: 225px;
+                    }
+
+                    .offer_menu_circum{
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 16px;
+                    }
+
+                    .arrow{
+                        right: 23px;
+                    }
+                }
+
+                .block_subtext_menu{
+                    width: 335px;
+                    padding-left: 30px;
+                    padding-right: 40px;
+
+                    .line{
+                        height: 90%;
+                    }
+
+                    .subtext_menu{
+                        line-height: 120%;
+                        margin-left: 25px;
+                    }
+                }
+
+                &.active {
+                    .block_subtext_menu {
+                        max-height: 750px;
+                        padding-bottom: 50px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    //--------------SWIPER-------------------------
+
+    .wrapper_slider{
+        //width: 375px;
+        height: 877px;
+        background: white;
+        padding-top: 40px;
+
+        h2{
+            display: none;
+        }
+
+        .h2_block{
+            display: block;
+            font-family: 'Mingzat', sans-serif;
+            @include text_par(30px, #111111, 900);
+            line-height: 150%;
+            margin-bottom: 23px;
+        }
+        
+    }
+
+    .swiper{
+        height: 710px;
+        margin-left: 795px;
+    }
+
+    .swiper-wrapper{
+        width: 335px;
+        
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        margin-top: 280px;
+    }
+
+    .swiper .swiper-button-prev {
+        margin-left: 45px;
+    }
+    
+    .swiper .swiper-button-next {
+        margin-right: 825px;
+    }
+
+    .block_slide{
+        width: 335px;
+        height: 615px;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-top: 25px;
+    }
+
+    .swiper_text{
+        width: 273px;
+        margin-right: 0px;
+
+        h3{
+            margin-bottom: 0px;
+        }
+    }
+
+    .swiper_img_1{
+        margin-top: 50px;
+        margin-left: -20px;
+    }
+
+    .swiper_img_2 {
+        margin-left: -15px;
+    }
+
+    .swiper_img_3 {
+        margin-top: 65px;
+    }
+
+    //--------------------EXAMPLE---------------
+
+    .block_example_store{
+
+        .h2_block{
+            display: block;
+            font-family: 'Mingzat', sans-serif;
+            @include text_par(30px, #111111, 900);
+            line-height: 150%;
+            margin-bottom: 23px;
+        }
+    }
+
 }
