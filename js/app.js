@@ -42,3 +42,15 @@ new Swiper('.swiper', {
     spaceBetween:25,
     initialSlide:0,
 });
+
+new Swiper('.swiper-exapmle', {
+    navigation:
+    {
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev',
+    },
+
+    slidesPerView: 2,
+    spaceBetween:33,
+    initialSlide:0,
+})
