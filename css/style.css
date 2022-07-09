@@ -1961,7 +1961,7 @@ h2 {
     width: 13px;
     border-radius: 50%;
     background: white;
-    margin-right: 18px;
+    margin-right: 28px;
   }
   .wrap_header .block_head .block_burger_point .burger_point::after, .wrap_header .block_head .block_burger_point .burger_point::before {
     content: "";
