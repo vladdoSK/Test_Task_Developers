@@ -1896,6 +1896,7 @@ h2 {
     display: block;
     width: 41px;
     height: 35px;
+    margin-left: -10px;
   }
   .wrap_header .block_head .logo_dev h1 {
     font-size: 10px;
