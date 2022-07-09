@@ -61,9 +61,21 @@ new Swiper('.swiper-exapmle', {
         prevEl:'.swiper-button-prev',
     },
 
-    slidesPerView: 2,
-    spaceBetween:33,
-    initialSlide:0,
+    
+
+    breakpoints:{
+        0:{
+            slidesPerView: 1,
+            spaceBetween:0,
+            initialSlide:0,
+        },
+        815:{
+            slidesPerView: 2.3,
+            spaceBetween:50,
+            initialSlide:0,
+        },
+
+    }
 })
 
 
